@@ -1,4 +1,4 @@
-FROM node:10 AS Builder
+FROM node:18 AS Builder
 
 ENV NPM_CONFIG_LOGLEVEL info
 
