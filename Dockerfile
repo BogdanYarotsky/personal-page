@@ -5,7 +5,6 @@ RUN yarn install
 COPY . .
 RUN yarn run build
 
-
 FROM nginx:latest
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx/default.conf.template /etc/nginx/templates/default.conf.template
 COPY --from=build /react-app/build /usr/share/nginx/html
